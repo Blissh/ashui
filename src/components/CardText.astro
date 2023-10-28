@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string;
+  body: string;
+  color: string;
+}
+
+const { title, body, color } = Astro.props;
+
+let fontColor = color === "red" ? "text-cream" : "text-olive";
+
+let bgColor = `bg-coffee-${color}`;
+
+let lines = body.split("\n");
+---
+
+<div
+  class:list={[
+    `max-w-sm h-full flex flex-col rounded-lg py-6 px-7 ${bgColor} shadow-lg`,
+  ]}
+>
+  <h3
+    class:list={[
+      `text-center mt-4 font-semibold md:text-2xl text-xl leading-none md:leading-none font-sans ${fontColor}`,
+    ]}
+  >
+    {title}
+  </h3>
+
+  {
+    lines.map((line) => (
+      <p
+        class:list={[
+          `text-left mt-4 mb-4 font-medium md:text-xl text-lg leading-none md:leading-none font-sans ${fontColor}`,
+        ]}
+      >
+        {line}
+      </p>
+    ))
+  }
+</div>

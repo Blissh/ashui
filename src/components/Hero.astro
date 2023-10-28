@@ -1,7 +1,10 @@
 ---
+import { Fragment } from "astro/jsx-runtime";
+import CardText from "./CardText.astro";
 import Logo from "./Logo.astro";
 import PrimaryButton from "./PrimaryButton.astro";
 import SecondaryButton from "./SecondaryButton.astro";
+import CardImage from "./CardImage.astro";
 ---
 
 <div class="relative mx-auto px-8 max-w-7xl p-24 lg:px-36 md:px-12">
@@ -22,5 +25,17 @@ import SecondaryButton from "./SecondaryButton.astro";
       <SecondaryButton href="/">Catalog</SecondaryButton>
       <PrimaryButton href="/">DM us for more</PrimaryButton>
     </div>
+    <CardText
+      title="Café Colombiano de Origen"
+      body="Nuestro café colombiano de origen es cuidadosamente seleccionado de las fincas locales, garantizando frescura y sabor auténtico en cada taza. \n Descubre el rico perfil de sabores que solo las tierras cafeteras colombianas pueden ofrecer."
+      color="red"
+    />
+    <CardText
+      title="Café Colombiano de Origen"
+      body="Nuestro café colombiano de origen es cuidadosamente seleccionado de las fincas locales, garantizando frescura y sabor auténtico en cada taza. \n Descubre el rico perfil de sabores que solo las tierras cafeteras colombianas pueden ofrecer."
+      color="yellow"
+    />
+
+    <CardImage url="https://picsum.photos/300/300" />
   </div>
 </div>

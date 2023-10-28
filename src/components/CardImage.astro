@@ -1,0 +1,11 @@
+---
+interface Props {
+  url: string;
+}
+
+const { url } = Astro.props;
+---
+
+<div>
+  <img src={url} alt="" />
+</div>
