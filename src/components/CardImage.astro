@@ -6,6 +6,10 @@ interface Props {
 const { url } = Astro.props;
 ---
 
-<div>
-  <img src={url} alt="" />
+<div class="relative group w-60 shadow-sm">
+  <img
+    src={url}
+    alt="Coffee"
+    class="rounded-lg max-w-sm transition-opacity hover:opacity-80 w-full"
+  />
 </div>
